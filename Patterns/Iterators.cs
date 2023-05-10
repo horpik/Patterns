@@ -5,13 +5,14 @@ class Buyer
     public void SeeCars(Dealership dealership)
     {
         ICarIterator iterator = dealership.CreateNumerator();
-        while(iterator.HasNext())
+        while (iterator.HasNext())
         {
             Car car = iterator.Next();
             car.ShowComponents();
         }
     }
 }
+
 interface ICarIterator
 {
     bool HasNext();
